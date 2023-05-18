@@ -49,12 +49,30 @@ the goal isn't to teach calculus it's to build intuition for how it works, slope
 ## Everything is a line if you zoom in
 ## Finding the slopes automatically
 ## Multiple dimensions
+## When all you have is gravity, everything looks like a hill
 ## Demos
+The image de-blurring demo from the autodiff tutorial is a really fun one
 
-
-# When all you have is gravity, everything looks like a hill
 # Optimizing: biologically inspired tricks
 ## Genetic algorithms
 # Optimizing: neural networks
 The point of this is that we can finally introduce the idea that neural networks are an easy way to turn things into "smooth" operations
 
+# Things that should probably go somewhere but I don't know where
+## lo-fi text encoding
+A lot of text manipulation involves learning how to encode text.
+
+But how is that done?
+
+There are a number of different ways to embed text, ranging from "bag of words" to actual learned tokenization like modern machine learning.
+
+The problem is that I'm not sure what counts as the "lo-fi" version of it. This is something to investigate because it opens up a huge number of possible creative applications.
+## Auto-encoding
+This is a related concept to text encoding but also far more wide-reaching
+
+The general principle is that if you can make a way to measure the inaccuracy of compress/uncompressing information then you can come up with an encoder/decoder pair by splitting the process in half
+
+How to present this core concept via intuition?
+# Misc references
+https://physicsbaseddeeplearning.org/intro.html
+https://github.com/johnowhitaker/aiaiart
