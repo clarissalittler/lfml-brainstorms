@@ -5,13 +5,15 @@ We're coming up with an outline of concepts, demos, and topics for a set of open
 ## Core concepts
 ### Math introduced
  - probability
- - 
+ - graphs? but like as paths that are influenced by the models?
 ### Context vs. contextless
 ### Randomness for generation
 ## Demos
 ### Text generation
 ### Audio generation
+- For working with polyphonic music one approach is to "encode" the polyphony into a BigInt by sorting the notes then shift and bitwise and them into ascending 8 bit sections. This relates to hashing and "dimensional reduction" but is a very "lo-fi" version. 
 ### Absurd image gen
+- colors could be (and often are) stored in the same way as the polyphonic notes above. where a state includes rgba info. so if we spent time on that it could be worthwhile to support these examples. it also gives insight into the data structure of a "hash map" which is a cs fundamental and how the markov chain is implemented in code.
 # Nearest neighbors and applications
 ## Core concepts
 ## Demos
