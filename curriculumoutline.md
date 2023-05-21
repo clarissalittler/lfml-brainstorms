@@ -75,6 +75,22 @@ This is a related concept to text encoding but also far more wide-reaching
 The general principle is that if you can make a way to measure the inaccuracy of compress/uncompressing information then you can come up with an encoder/decoder pair by splitting the process in half
 
 How to present this core concept via intuition?
+## The world's tinest CLIP
+One thing that would probably make a good module for any class.
+
+The basic concept here is that you build the tinest, tiniest, most scuffed CLIP like system possible.
+
+This means you build an autoencoder for images and an autoencoder for text and make part of the loss maximizing the dot product between the text part and the image part of the encoding
+
+To make this as dead simple as possible I think the easiest thing we can do is make something like 32x32 images of different shapes: triangle, circle, square, ??? things like that
+
+and then we associate them with words and encode the words just as a fixed length descriptor (rather than a true tokenizer) and then building the association in terms of those fixed vectors: just long enough to include certain adjectives in addition to nouns
+
+Then, if everything works correctly, you should be able to not only request shapes with adjectives they didn't specifically have but start using whatever words you want, if they fit, and seeing what shapes come out.
+
+(ccl being weird: okay so this is actually related to the concept of sigil generation but we don't need to frame it that way because it'd sorta get *odd* quickly for folks who aren't expecting computational witchcraft)
+
+I *think* this is small enough we'd be able to actually use it both as a teaching example and also build it entirely in our own machine learning framework
 # Misc references
 https://physicsbaseddeeplearning.org/intro.html
 https://github.com/johnowhitaker/aiaiart
