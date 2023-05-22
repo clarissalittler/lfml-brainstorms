@@ -1,5 +1,15 @@
 # Purpose of this doc
 We're coming up with an outline of concepts, demos, and topics for a set of open modules on lo-fi machine learning
+# Open questions
+ How many modules should exist?
+
+# Classification vs. Regression
+- Identify the differences between classification and regression 
+- Discrete categories vs continuous values
+- Thresholding continuous values to create discrete categories
+- Applications: what are the uses of each for real time interaction
+
+Should this also borrow from the presentation in *Rashid (2016) Make your own neural network*? It's a good text for introducing this as basic curve-fitting.
 
 # Markov processes
 ## Core concepts
@@ -40,7 +50,16 @@ that's used for hyphenation to, instead, find and break down the syllabic struct
 the learner is trained on a bunch of poetic forms and then matches the syllabic patterns to the one that's the closest fit, then forces the linebreaks so it kinda fits albeit probably with decent wrenching
 
 No I'm not actually sure how this will work it just sounds fun and I want something textual
-# Curve fitting: a first introduction
+# DTW, MFCC, Speec/Sound Classification
+- "signals" as data, try to visualize a "time series"
+- try to define "gestures" broadly to include speech
+- problematize gestures (different speeds, different bodies, saying a word twice exactly the same)
+- vocab/discuss "dimensionality reduction" and "feature extraction"
+- JavaScript code performs fft -> mfcc, assists creating dataset
+- try to succesfully recognize a few words
+- try to animate an anime character's mouth with phonemes and different images
+- Dynamic time warping: fits into optimization thread
+- Mel scale feature extraction: ccl has never written this before, is writing the JavaScript implementation within scope?
 # Optimizing in 1-d: finding peaks and valleys
 # Smoothness and gravity
 Here's where we introduce baby's first automatic differentiation
@@ -57,10 +76,26 @@ The image de-blurring demo from the autodiff tutorial is a really fun one
 
 # Optimizing: biologically inspired tricks
 ## Genetic algorithms
+### Concepts
+Yet another way to turn a problem into riding along slopes, but this time you're not worrying about questions of smoothness and slope. No, instead you're just trying to find the extrema of measures by using genetically inspired things for search.
+### Demos
+ - Painting with genetic algorithms, can be done in p5.js even
+ - Music generation (user defined fitness functions?)
+ - Text generation
+
 # Optimizing: neural networks
 The point of this is that we can finally introduce the idea that neural networks are an easy way to turn things into "smooth" operations
 
 # Things that should probably go somewhere but I don't know where
+## Principal Component Analysis
+This is basically a technique from machine learning that is about finding the most useful basis of a dataset
+
+There's something about it that rhymes without auto-encoding, to me, in that it's about finding a smaller representation automatically from the structure of the data. It's a bit different, though, in that you're not deciding on the dimensional representation in advance by creating a bottleneck. You're building it based off not deeper structure in the data but off the covariance in the numeric data.
+
+Here's a fun use of PCA for artistic purposes:
+https://aparico.github.io/
+
+
 ## lo-fi text encoding
 A lot of text manipulation involves learning how to encode text.
 
@@ -110,3 +145,15 @@ This is the paper that started whole transformer architecture revolution six yea
 Vaswani, Shazeer & Parmar et al. (2017) Attention Is All You Need, CoRR.
 https://arxiv.org/abs/1706.03762
 
+Genetic algorithms for imitating images to be painting-like
+https://shahriyarshahrabi.medium.com/procedural-paintings-with-genetic-evolution-algorithm-6838a6e64703
+original github https://github.com/anopara/genetic-drawing
+
+Early research on genetic algorithms and art
+https://www.researchgate.net/publication/249562088_Genetic_Algorithms_in_Visual_Art_and_Music
+
+Genetic algorithms for music generation:
+https://www.researchgate.net/publication/221008730_A_simple_genetic_algorithm_for_music_generation_by_means_of_algorithmic_information_theory
+
+Genetic algorithms for poetry (warning: an entire thesis):
+https://era.ed.ac.uk/bitstream/handle/1842/314/IP040022.pdf?isAllowed=y&sequence=1
