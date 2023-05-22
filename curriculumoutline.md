@@ -91,6 +91,22 @@ Then, if everything works correctly, you should be able to not only request shap
 (ccl being weird: okay so this is actually related to the concept of sigil generation but we don't need to frame it that way because it'd sorta get *odd* quickly for folks who aren't expecting computational witchcraft)
 
 I *think* this is small enough we'd be able to actually use it both as a teaching example and also build it entirely in our own machine learning framework
+## Transformers
+It's the architecture that's changed the world. It feels like it'd probably be worth it to come up with some kind of minimal exam that demonstrates the main concepts:
+
+Namely, a system that looks at the entire context and learns a "weighting" for how to associate pieces.
+
 # Misc references
+This is a textbook that covers concepts in deep learning from the perspective of connecting differentiable programming and physics. The natural connection here is that the concept of minimizing the loss is basically the same as minimizing the lagrangian in physics. This is not something to use as direct teaching material but it could potentially be inspiration for visual things
 https://physicsbaseddeeplearning.org/intro.html
+
+This is a series of google colab notebooks from the orientation of making small art projects. It's probably one of the best introductions to neural networks in PyTorch and it's the thing that originally got me thinking that differentiable programming might be a good perspective to start taking as a unifying explanation for the reason why neural networks have become so ubiquitous
 https://github.com/johnowhitaker/aiaiart
+
+This is a tutorial on building a variational autoencoder that looks actually kinda legit. My hope is that I can take this apart and figure out how to build a very minimal version to use in trying to understand how to build a more interesting version of "baby's first CLIP", one that demonstrates that modern machine learning techniques involve learning representations
+https://blog.paperspace.com/how-to-build-variational-autoencoder-keras/
+
+This is the paper that started whole transformer architecture revolution six years ago.
+Vaswani, Shazeer & Parmar et al. (2017) Attention Is All You Need, CoRR.
+https://arxiv.org/abs/1706.03762
+
