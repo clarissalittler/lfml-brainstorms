@@ -20,6 +20,9 @@ Should this also borrow from the presentation in *Rashid (2016) Make your own ne
 ### Randomness for generation
 ## Demos
 ### Text generation
+ This is the simplest, most straightforward, use of markov processes. What would be interesting is to experiment, I think, with messier kinds of splits of tokens for artistic reasons. For example, normally you would rip out whitespace but I think instead keeping linebreaks and punctuation as their own tokens will create some chaos.
+ 
+ The library should also have variable context windows to show how the idea can adapt to a very limited sort of state which is still very different than a *real* context like what modern transformers have. Markov processes with a window as state is, basically, a connecting point to the idea of RNNs
 ### Audio generation
 - For working with polyphonic music one approach is to "encode" the polyphony into a BigInt by sorting the notes then shift and bitwise and them into ascending 8 bit sections. This relates to hashing and "dimensional reduction" but is a very "lo-fi" version. 
 ### Absurd image gen
@@ -95,6 +98,7 @@ There's something about it that rhymes without auto-encoding, to me, in that it'
 Here's a fun use of PCA for artistic purposes:
 https://aparico.github.io/
 
+they're using it for image augmentation but I think it's going to be more interesting as a way of processing images
 
 ## lo-fi text encoding
 A lot of text manipulation involves learning how to encode text.
